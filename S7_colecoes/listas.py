@@ -267,5 +267,112 @@ print(numeros.index(5, 3)) # Buscando a partir do índice 3
 # Podemos fazer busca dentro de um range início/fim
 print(numeros.index((8, 3, 6))) # Buscar o índice do valor entre os indices 6 e 8
 
+# Revisão de slicing
+
+# lista[início:fim:passo]
+# range[início:fim:passo]
+
+lista =[1, 2, 3, 4]
+
+print(lista[1:]) # Inciando no índice 1 e pegando todos os elementos restantes
+
+# Trabalhando com slice de lista com parâmentro 'fim'
+
+print(lista[:2]) # Começa em o, pega até o índice 2 -1
+
+print(lista[:4]) # Começa em o, pega até o índice 4 -1
+
+print(lista[1:3]) # Começa em 1, pega até o índice 3-1
+
+print(lista[:-1])
+
+# Trabalhando com passo
+
+print(lista[1::2]) # Começa em 1, vai até o fim, de 2 em 2
+
+print(lista[0::2]) # Começa em 0, vai até o fim de 2 em 2
+
+# Invertendo valores em uma lista
+
+nomes = ['Geek', 'University']
+
+nomes[0], nomes[1] = nomes[1], nomes[0]
+print(nomes)
+
+nomes.reverse()
+print(nomes)
+
+# Soma*. valor máximo*, valor mínimo*, tamanho
+
+# * se os valores forem todos inteiros ou reais
+
+lista = [1, 2, 3, 4, 5, 6]
+
+print(sum(lista))   # Soma
+print(max(lista))   # Máximo
+print(min(lista))   # Mínimo
+print((len(lista))) # tamanho
+
+# Transformar um lista em tupla
+
+lista = [1, 2, 3, 4, 5, 6]
+print(lista)
+print(type(lista))
+
+tupla = tuple(lista)
+print(tupla)
+print(type(tupla))
+# Desmpacotamento de listas
+
+lista = [1, 2, 3]
+
+num1, num2, num3 = lista
+
+print(num1)
+print(num2)
+print(num3)
+
+# OBS: Se tivermos um número de elementos na lista ou variáveis para receber dos dados teremos ValueError
+
+# Copiando uma lista para outra (Challow Copy e Deep Copy)
+# Foram 1
+
+lista = [1, 2, 3]
+print(lista)
+
+nova = lista.copy()
+
+print(nova)
+
+nova.append(4)
+
+print(lista)
+print(nova)
+
+# Veja que ao utilzarmos lista.copy copiamos os dados da lsita para uma nova lista, mas ela ficaram totalmente
+# independetes, ou seja, modificando uma lista não afeta a outra, isso em python
+# é chamado de Deep Copy (cópia profunda)
+
+# Forma 2
+
+lista = [1, 2, 3]
+print(lista)
+
+nova = lista # cópia
+
+print(nova)
+
+nova.append(4)
+
+print(lista)
+print(nova)
+
+# veja que utilizamos a cópia via atribuição e copiamos os dados da lista para a nova lista
+# mas após realizar motificação em uma das listas, estas modificação se refletiu em ambas
+# as listas, isto em python é chamado de Shallow Copy
+
 """
+
+
+
 
